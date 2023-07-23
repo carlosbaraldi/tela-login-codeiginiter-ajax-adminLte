@@ -6,12 +6,13 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\Filters\FilterInterface;
 
+
 class Auth implements FilterInterface
 {
     public function before(RequestInterface $request, $arguments = null)
     {
         if ((bool)session()->isLoggedIn != true) {
-            return redirect()->to('/entrar');
+            return redirect()->to('/LoginSystem');
         }
     }
 
