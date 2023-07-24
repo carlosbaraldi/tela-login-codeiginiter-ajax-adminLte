@@ -1,0 +1,647 @@
+INFO - 2023-07-24 08:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 08:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 08:43:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 08:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 08:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-24 08:48:31 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 415.
+ 1 APPPATH/Views/login-system.php(90): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/proj-coffee/app/Views/login-system.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/LoginSystem.php(12): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+CRITICAL - 2023-07-24 08:48:46 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 415.
+ 1 APPPATH/Views/login-system.php(90): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/proj-coffee/app/Views/login-system.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/LoginSystem.php(12): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+INFO - 2023-07-24 08:48:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-24 08:48:49 --> View themes, no current section.
+in SYSTEMPATH/View/View.php on line 415.
+ 1 APPPATH/Views/login-system.php(90): CodeIgniter\View\View->endSection()
+ 2 SYSTEMPATH/View/View.php(224): include('/var/www/proj-coffee/app/Views/login-system.php')
+ 3 SYSTEMPATH/View/View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1180): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/LoginSystem.php(12): view()
+ 6 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->index()
+ 7 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+INFO - 2023-07-24 08:49:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 08:50:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-24 09:05:54 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#7 /var/www/proj-coffee/app/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+#8 /var/www/proj-coffee/app/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /var/www/proj-coffee/app/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+#7 /var/www/proj-coffee/app/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /var/www/proj-coffee/app/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+#6 /var/www/proj-coffee/app/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+#7 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-07-24 09:05:54 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+ERROR - 2023-07-24 09:06:29 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#7 /var/www/proj-coffee/app/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+#8 /var/www/proj-coffee/app/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /var/www/proj-coffee/app/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+#7 /var/www/proj-coffee/app/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /var/www/proj-coffee/app/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+#6 /var/www/proj-coffee/app/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+#7 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-07-24 09:06:29 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UsersModel.php(37): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/LoginSystem.php(25): App\Models\UsersModel->getByUserLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+CRITICAL - 2023-07-24 09:13:22 --> Undefined array key "userPassword"
+in APPPATH/Controllers/LoginSystem.php on line 29.
+ 1 APPPATH/Controllers/LoginSystem.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+INFO - 2023-07-24 09:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:13:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:13:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 09:47:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:18:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:19:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:22:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:25:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:25:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:25:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:28:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:31:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:34:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:35:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:35:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:46:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:48:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:48:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 10:48:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-24 10:57:24 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, string given, called in /var/www/proj-coffee/app/Controllers/LoginSystem.php on line 39
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 32.
+ 1 APPPATH/Controllers/LoginSystem.php(39): CodeIgniter\HTTP\RedirectResponse->to()
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+CRITICAL - 2023-07-24 10:59:26 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, string given, called in /var/www/proj-coffee/app/Controllers/LoginSystem.php on line 38
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 32.
+ 1 APPPATH/Controllers/LoginSystem.php(38): CodeIgniter\HTTP\RedirectResponse->to()
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+CRITICAL - 2023-07-24 11:01:26 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, string given, called in /var/www/proj-coffee/app/Controllers/LoginSystem.php on line 40
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 32.
+ 1 APPPATH/Controllers/LoginSystem.php(40): CodeIgniter\HTTP\RedirectResponse->to()
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+CRITICAL - 2023-07-24 11:01:49 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, string given, called in /var/www/proj-coffee/app/Controllers/LoginSystem.php on line 40
+in SYSTEMPATH/HTTP/RedirectResponse.php on line 32.
+ 1 APPPATH/Controllers/LoginSystem.php(40): CodeIgniter\HTTP\RedirectResponse->to()
+ 2 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 3 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 4 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+ 5 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+INFO - 2023-07-24 12:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:24:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:27:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:27:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:28:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:28:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:29:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:32:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-24 12:36:38 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#7 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#8 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#7 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#6 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#7 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-07-24 12:36:38 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+ERROR - 2023-07-24 12:37:41 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#7 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#8 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#7 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#6 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#7 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-07-24 12:37:41 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+ERROR - 2023-07-24 12:38:25 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#7 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#8 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#7 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#6 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#7 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-07-24 12:38:25 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+ERROR - 2023-07-24 12:39:10 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#7 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#8 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#7 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#6 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#7 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-07-24 12:39:10 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+ERROR - 2023-07-24 12:40:00 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#3 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#5 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#6 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#7 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#8 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#11 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#12 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#13 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#14 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:173
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/MySQLi/Connection.php(173): mysqli->real_connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#7 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#11 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#12 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution in /var/www/proj-coffee/system/Database/MySQLi/Connection.php:218
+Stack trace:
+#0 /var/www/proj-coffee/system/Database/BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /var/www/proj-coffee/system/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 /var/www/proj-coffee/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /var/www/proj-coffee/system/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 /var/www/proj-coffee/system/BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 /var/www/proj-coffee/app/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+#6 /var/www/proj-coffee/app/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+#7 /var/www/proj-coffee/system/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+#8 /var/www/proj-coffee/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /var/www/proj-coffee/system/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/proj-coffee/public/index.php(67): CodeIgniter\CodeIgniter->run()
+#11 /var/www/proj-coffee/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+CRITICAL - 2023-07-24 12:40:00 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for mysql-dev-v1-0-1.siscafe.zeroumbit.com.br failed: Temporary failure in name resolution
+in SYSTEMPATH/Database/BaseConnection.php on line 427.
+ 1 SYSTEMPATH/Database/BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UsersModel.php(39): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/LoginSystem.php(23): App\Models\UsersModel->getByUserLogin()
+ 7 SYSTEMPATH/CodeIgniter.php(932): App\Controllers\LoginSystem->signIn()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest()
+10 FCPATH/index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/var/www/proj-coffee/public/index.php')
+INFO - 2023-07-24 12:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 12:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:09:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:22:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:26:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-24 13:26:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

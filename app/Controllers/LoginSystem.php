@@ -15,14 +15,12 @@ class LoginSystem extends BaseController
 
     public function signIn()
     {
-        $userLogin = $this->request->getPost('userLogin');
-        $userPassword = $this->request->getPost('userPassword');
+        $userLogin = strval($this->request->getPost('userLogin'));
+        $userPassword = strval($this->request->getPost('userPassword'));
 
         $usersModel = new UsersModel();
 
         $dataUser = $usersModel->getByUserLogin($userLogin);
-
-        dd($dataUser);
 
         /**
          * Verifica se existe usuário cadastrado no banco de dados com o userLogin e userPassword passado pelo usuário
@@ -32,14 +30,32 @@ class LoginSystem extends BaseController
             if (password_verify($userPassword, $hashUsuario)) {
                 session()->set('isLoggedIn', true);
                 session()->set('userLogin', $dataUser['userLogin']);
-                return redirect()->to(base_url());
+
+                $date = [
+                    'status' => '1',
+                    'url' => base_url('/home/index'),
+                    'message' => 'Usuário encontrado :)',
+                ];
+
+                echo json_encode($date, JSON_UNESCAPED_UNICODE);
             } else {
-                session()->setFlashData('msg', 'Usuário ou Senha incorretos');
-                return redirect()->to('/LoginSystem');
+
+                $date = [
+                    'status' => '0',
+                    'url' => '',
+                    'message' => 'Usuário e/ou senha incorretos :(',
+                ];
+
+                echo json_encode($date, JSON_UNESCAPED_UNICODE);
             }
         } else {
-            session()->setFlashData('msg', 'Usuário ou Senha incorretos');
-            return redirect()->to('/LoginSystem');
+
+            $date = [
+                'status' => '0',
+                'url' => '',
+                'message' => 'Usuário e/ou senha incorretos :(',
+            ];
+            echo json_encode($date, JSON_UNESCAPED_UNICODE);
         }
     }
 

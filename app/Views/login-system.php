@@ -6,20 +6,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Manifest -->
-    <link rel="manifest" href="<?php echo base_url('manifest.json') ?>" />
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo base_url('theme/plugins/fontawesome-free/css/all.min.css') ?>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Sweetalert2 -->
     <link rel="stylesheet" href="<?= base_url('theme/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') ?>">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo base_url('theme/dist/css/adminlte.min.css') ?>">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://virtualdelivery.com.br/rapidogasweb/theme/favicon.ico" type="image/x-icon" />
-
+    <link rel="shortcut icon" href="<?= base_url('theme/favicon.ico') ?>" type="image/x-icon" />
 </head>
 
 <body class="hold-transition login-page">
@@ -38,10 +34,10 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Faça login em nosso sistema</p>
-                
-                <form action="<?php echo base_url('LoginSystem/signIn') ?>" method="post">
+
+                <form id="login_form" method="post">
                     <div class="input-group mb-3">
-                        <input type="userLogin" name="userLogin" id="userLogin" class="form-control" required autofocus value="teste">
+                        <input type="userLogin" name="userLogin" id="userLogin" class="form-control" autofocus value="">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fa fa-user"></span>
@@ -49,7 +45,7 @@
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="userPassword" id="userPassword" class="form-control" required autofocus value="teste">
+                        <input type="password" name="userPassword" id="userPassword" class="form-control" autofocus value="">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fa fa-unlock-alt"></span>
@@ -60,7 +56,7 @@
                     <div class="row">
                         <!-- /.col -->
                         <div class="col-12">
-                            <button class="btn  btn-block" type="submit" style="background-color: rgba(10,0,255,1); color: #ffffff;">
+                            <button id="btn_login" class="btn btn-block" type="submit" style="background-color: rgba(10,0,255,1); color: #ffffff;">
                                 <i class="fa-sharp fa-solid fa-right-to-bracket" style="color: #ffffff;"></i> Entrar
                             </button>
                         </div>
@@ -70,9 +66,6 @@
                 </form>
 
             </div>
-            
-            <?php $msg = session()->getFlashData('msg') ?>
-            <input type="hidden" class="form-control" id="mensagem" name="mensagem" value="<?= $msg ?>">
 
         </div>
         <!-- /.login-card-body -->
@@ -92,69 +85,11 @@
     <script src="<?= base_url('theme/plugins/sweetalert2/sweetalert2.all.js') ?>"></script>
     <!-- AdminLTE App -->
     <script src="<?php echo base_url('theme/dist/js/adminlte.min.js') ?>"></script>
-   
-    <script>
-        var msg = document.getElementById('mensagem').value;
-
-        if (msg == "Usuário não encontrado, faça seu cadastro") {
-
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top',
-                showConfirmButton: false,
-                timer: 2000,
-                timerProgressBar: true
-            })
-            Toast.fire({
-                icon: 'error',
-                title: msg
-            })
-        }
-
-        if (msg == "Usuário já cadastrado, faça o login com seu telefone") {
-
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top',
-                showConfirmButton: false,
-                timer: 2000,
-                timerProgressBar: true
-            })
-            Toast.fire({
-                icon: 'error',
-                title: msg
-            })
-        }
-
-        if (msg == "Usuário cadastrado com sucesso, faça o login com seu telefone") {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top',
-                showConfirmButton: false,
-                timer: 2000,
-                timerProgressBar: true
-            })
-            Toast.fire({
-                icon: 'success',
-                title: msg
-            })
-        }
-
-        if (msg == "Oops, houve algum erro, tente novamente mais tarde") {
-            const Toast = Swal.mixin({
-                toast: true,
-                position: 'top',
-                showConfirmButton: false,
-                timer: 2000,
-                timerProgressBar: true
-            })
-            Toast.fire({
-                icon: 'error',
-                title: msg
-            })
-        }
-    </script>
-
+    <!-- JS CALIDATION -->
+    <script src="<?php echo base_url('theme/plugins/bs-custom-file-input/bs-custom-file-input.min.js') ?>"></script>
+    <!-- JS LOGIN -->
+    <script src="<?php echo base_url('js/login.js') ?>"></script>
+    
 </body>
 
 </html>

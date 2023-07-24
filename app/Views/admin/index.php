@@ -39,16 +39,6 @@
    * Script para emitir um alerta de produtos em promoção
    * 
    */
-  $(function() {
-    var Toast = Swal.fire({
-      title: 'Temos Promoção para você :)',
-      text: 'Atenção, atenção! Tem oferta relâmpago passando pela Rápido Gás!',
-      icon: 'warning',
-      iconColor: '#FFA500',
-      confirmButtonText: '<i class="fa fa-thumbs-up"></i> Aproveitar :)',
-      confirmButtonColor: "#007bff"
-    });
-  });
 </script>
 
 <?= $this->endSection() ?>

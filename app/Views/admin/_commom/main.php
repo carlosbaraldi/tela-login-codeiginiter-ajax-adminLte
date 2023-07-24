@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pedidos Rápido Gás</title>
+  <title>Controle de Amostras - <?= $_ENV['app_empresa'] ?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,12 +16,11 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="<?= base_url('theme/dist/css/adminlte.min.css') ?>">
   <!-- Favicon -->
-  <link rel="shortcut icon" href="https://virtualdelivery.com.br/rapidogasweb/theme/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="<?= base_url('theme/favicon.ico') ?>" type="image/x-icon" />
 
 </head>
 
 <body class="hold-transition layout-footer-fixed sidebar-collapse">
-
 
   <?= $this->include('admin/_commom/header'); ?>
 

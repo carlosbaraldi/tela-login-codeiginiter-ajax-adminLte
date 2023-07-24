@@ -35,7 +35,7 @@
   <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
     <div class="text-center mt-1">
-      <img class="profile-user-img img-fluid img-circle" src="https://virtualdelivery.com.br/rapidogas/produtos/semimagem.jfif" alt="User profile picture" style="width: 70px;">
+      <img class="profile-user-img img-fluid img-circle" src="" alt="User profile picture" style="width: 70px;">
     </div>
     <div class="text-center">
       <h5 class="brand-text font-weight-light">Seja bem vindo (a)</h5>
@@ -61,7 +61,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
-            <a href="<?= $_ENV['app.baseURL'] . 'perfilUsuario/index' ?>" class="nav-link">
+            <a href="<?= $_ENV['app.baseURL'] . '' ?>" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
               <p>
                 MEU PERFIL
@@ -69,7 +69,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= $_ENV['app.baseURL'] . 'minhasCompras/index' ?>" class="nav-link">
+            <a href="<?= $_ENV['app.baseURL'] . '' ?>" class="nav-link">
               <i class="nav-icon fas fa-barcode"></i>
               <p>
                 MINHAS COMPRAS
@@ -86,7 +86,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= $_ENV['app.baseURL'] . 'entrar/signOut' ?>" class="nav-link">
+            <a href="<?= $_ENV['app.baseURL'] . 'loginSystem/signOut' ?>" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>
               <p>
                 Sair do Sistema
@@ -105,26 +105,6 @@
   <!--  SCRIPTS CORRESPONDENTE A PAGINA -->
   <?= $this->section('scripts') ?>
 
-  <script>
-    $(function() {
-      $("#notificacao").on("click", function() {
-        $.ajax({
-          "url": '/notificacao/lerNotificacao',
-          "type": 'POST',
-          "datatype": "json",
-          success: function(result, data) {
-
-            alert("ALTERADO");
-          },
-          error: function(result, data) {
-
-            alert("ERRO");
-          },
-        });
-
-      });
-
-    });
   </script>
 
 

@@ -32,12 +32,12 @@ class UsersModel extends Model
     ];
 
 
-    public function getByUserLogin(string $userLogin): array
+    public function getByUserLogin(string $userLogin)
     {
-        $rq =  $this->where('userLogin', $userLogin)->first();
+        $rq =  $this->select('idUser, userName, userLogin, userPassword')
+            ->where('userLogin', $userLogin)
+            ->first();
 
         return !is_null($rq) ? $rq : [];
     }
-
-
 }
