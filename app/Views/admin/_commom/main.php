@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="hold-transition layout-footer-fixed sidebar-collapse">
+<body class="hold-transition layout-footer-fixed sidebar-mini layout-fixed">
 
   <?= $this->include('admin/_commom/header'); ?>
 

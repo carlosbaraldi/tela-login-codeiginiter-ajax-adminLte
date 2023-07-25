@@ -35,12 +35,12 @@
   <aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
     <div class="text-center mt-1">
-      <img class="profile-user-img img-fluid img-circle" src="" alt="User profile picture" style="width: 70px;">
+      <img class="profile-user-img img-fluid img-circle" src="<?= $_ENV['app.baseURL'] . '/theme/img/login/logo.svg' ?>" alt="User profile picture" style="width: 70px;">
     </div>
     <div class="text-center">
       <h5 class="brand-text font-weight-light">Seja bem vindo (a)</h5>
       <h4 class="brand-text font-weight-light"><strong><?php echo session()->nome ?></strong></h4>
-      <h4 style="display: none;"><?php echo session()->idUsuario ?></h4>
+      <h4 style="display: none;"><?= session()->idUsuario ?></h4>
     </div>
 
     <!-- SidebarSearch Form -->
