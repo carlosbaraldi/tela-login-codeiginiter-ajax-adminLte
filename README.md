@@ -1,4 +1,10 @@
-# Sistema para controle de Amostras de Café
+# TELA DE LOGIN PRONTA PARA USO
+
+## TECNOLOGIAS UTILIZADAS
+CODEIGNITER 4
+AJAX
+ADMIN LTE
+
 
 ## Atenção!!!
 
