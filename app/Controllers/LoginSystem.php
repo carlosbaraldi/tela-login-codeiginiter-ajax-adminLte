@@ -3,17 +3,28 @@
 namespace App\Controllers;
 
 use App\Models\UsersModel;
+use CodeIgniter\HTTP\RedirectResponse;
 
 class LoginSystem extends BaseController
 {
 
-    public function index()
+    /**
+     * FUNÇÃO RETORNA A VIEW DE LOGIN, ONDE O USUARIO DIGITA SEU LOGIN E SENHA
+     *
+     * @return string
+     */
+    public function index(): string
     {
         return view('login-system');
     }
 
 
-    public function signIn()
+    /**
+     * FUNÇÃO QUE CONSULTA SE EXISTE USUARIO E SENHA CADASTRADO
+     *
+     * @return void
+     */
+    public function signIn():void
     {
         $userLogin = strval($this->request->getPost('userLogin'));
         $userPassword = strval($this->request->getPost('userPassword'));
@@ -23,7 +34,7 @@ class LoginSystem extends BaseController
         $dataUser = $usersModel->getByUserLogin($userLogin);
 
         /**
-         * Verifica se existe usuário cadastrado no banco de dados com o userLogin e userPassword passado pelo usuário
+         * CASO EXISTA USUARIO ELE COMPARA SE A SENHA DIGITADA É IGUAL A SENHA ARMAZENADA NO BANCO DE DADOS
          */
         if (count($dataUser) > 0) {
             $hashUsuario = $dataUser['userPassword'];
@@ -34,7 +45,7 @@ class LoginSystem extends BaseController
                 $date = [
                     'status' => '1',
                     'url' => base_url('/home/index'),
-                    'message' => 'Usuário encontrado :)',
+                    'message' => 'Usuário encontrado :)', 
                 ];
 
                 echo json_encode($date, JSON_UNESCAPED_UNICODE);
@@ -60,11 +71,11 @@ class LoginSystem extends BaseController
     }
 
     /**
-     * Realiza o logout do sistema finalizando a sessão
+     * FUNÇÃO PARA SAIR DA AREA ADMINISTRATIVO, FINALIZANDO A SESSAO E RETORNA A BASE URL
      *
-     * @return void
+     * @return RedirectResponse
      */
-    public function signOut()
+    public function signOut():RedirectResponse
     {
         session()->destroy();
         return redirect()->to(base_url());

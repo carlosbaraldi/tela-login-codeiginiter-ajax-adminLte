@@ -32,7 +32,14 @@ class UsersModel extends Model
     ];
 
 
-    public function getByUserLogin(string $userLogin)
+   /**
+    * FUNÇÃO QUE CONSULTA DO BANCO DE DADOS SE EXISTE USUARIO CADASTRADO, RETORNA UM ARRAY COM AS INFORMACOES 'idUser, userName, userLogin, userPassword'
+    * CASO ARRAY VAZIO SIGNIFICA QUE NÃO ENCONTROU O USUARIO
+    *
+    * @param string $userLogin
+    * @return array
+    */
+    public function getByUserLogin(string $userLogin):array
     {
         $rq =  $this->select('idUser, userName, userLogin, userPassword')
             ->where('userLogin', $userLogin)
